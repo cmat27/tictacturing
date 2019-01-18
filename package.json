@@ -46,6 +46,7 @@
     "react-dev-utils": "^7.0.1",
     "react-dom": "^16.7.0",
     "react-router": "^3.2.1",
+    "react-tap-event-plugin": "^3.0.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
@@ -57,8 +58,8 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "GRAPHQL_ENDPOINT=https://api.graph.cool/relay/v1/cjqrja28t5iwp0190ryc2upoh node scripts/start.js",
+    "build": "GRAPHQL_ENDPOINT=https://api.graph.cool/relay/v1/cjqrja28t5iwp0190ryc2upoh node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
