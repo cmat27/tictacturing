@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import RaisedButton from "material-ui/RaisedButton";
-//import injectTapEventPlugin from 'react-tap-event-plugin'
-//injectTapEventPlugin() this plugin is not supported on React version > 16.4.0
-//https://github.com/zilverline/react-tap-event-plugin/issues/121
+import NavDrawer from "../components/NavDrawer";
+import { Header, Main } from "../styled/Template";
 
 class Template extends Component {
   constructor() {
@@ -15,21 +13,10 @@ class Template extends Component {
     return (
       <MuiThemeProvider>
         <div>
-          <header>
-            <h1>TicTacTuring</h1>
+          <NavDrawer />
+          <Header>TicTacTuring App</Header>
 
-            <RaisedButton
-              label={"test button"}
-              primary={true}
-              onClick={() => {
-                this.setState({ title: "OOOk easy pal" });
-              }}
-            />
-          </header>
-          <main>
-            {this.props.children}
-            <div> {this.state.title}</div>
-          </main>
+          <Main>{this.props.children}</Main>
         </div>
       </MuiThemeProvider>
     );
